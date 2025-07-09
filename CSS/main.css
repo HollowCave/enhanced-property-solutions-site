@@ -311,6 +311,20 @@ h2 {
   font-size: 0.8rem;
 }
 
+/* Terms of Service and Privacy Policy*/
+.polciy-and-terms {
+    padding: 2rem;
+}
+
+.polciy-and-terms h1,
+.polciy-and-terms h2 {
+    text-align: center;
+}
+
+.polciy-and-terms p {
+    margin-bottom: 1rem;
+}
+
 /* Tablet/Desktop Enhancements for List */
 @media (min-width: 600px) {
   .reasons-list {
