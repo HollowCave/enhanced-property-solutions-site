@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+h1, h2, h3 {
+    color: #003366;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #003366;
+    color: white;
+    position: relative;
+    z-index: 20;
+}
+
+/* Brand */
+.brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Hamburger */
+.hamburger {
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    z-index: 21;
+}
+
+.hamburger span {
+    margin: 0 auto 5px auto;
+    width: 25px;
+    background: white;
+    border-radius: 2px;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+}
+
+.hamburger span:last-of-type {
+    margin-bottom: 0;
+}
+
+/* X Animation */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Navigation Menu */
+.nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background-color: #003366;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 15;
+}
+
+.nav-links.show {
+    right: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+/* Main Hero and title below nav */
+header,
+.main-intro {
+    text-align: center;
+}
+
+.main-intro img {
+    max-height: 100%;
+    max-width: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.main-intro h1,
+.main-intro h2 {
+    margin-bottom: 1rem;
+}
+
+.main-intro p {
+    margin-bottom: 1rem;
+}
+
+/* Form */
+.form-container {
+    max-width: 500px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin: 0 auto 4rem auto;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 1rem;
+    
+}
+
+.form-container p {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+/* Steps to sold */
+.steps-to-sold h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.steps-to-sold-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    max-width: 90%;
+}
+
+.steps-to-sold-wrapper > div {
+    text-align: center;
+    width: 200px;
+    margin-bottom: 1rem;
+}
+
+.steps-to-sold-wrapper div .frame {
+    padding: 5px;
+    background-color: #ffffff;
+    border: solid rgba(0, 0, 0, .15);
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.steps-to-sold-wrapper div .frame img {
+    display: block;
+    max-width: 100%;
+}
+
+.fit-intro {
+    text-align: center;
+}
+
+/* Situations we help with */
+.situations-we-help-wrapper {
+    padding: 1rem;
+}
+
+#situations-we-help {
+    text-align: center;
+}
+
+.reasons-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.reasons-list li {
+  display: flex;
+  align-items: flex-start;
+  background-color: #ffffff;
+  border-left: 4px solid #003366;
+  padding: 0.9rem 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333333;
+  transition: background-color 0.3s ease;
+}
+
+.reasons-list li:hover {
+  background-color: #eaf2f8;
+}
+
+.reasons-list li i {
+  color: #003366;
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.reasons-list li span {
+  display: block;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #222;
+  color: #d4d4d4;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-nav {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-nav a {
+  color: #d4d4d4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #ffffff;
+}
+
+.footer-social {
+  margin-bottom: 1rem;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  fill: #d4d4d4;
+  transition: filter 0.3s ease;
+  filter: brightness(1);
+}
+
+.footer-social a:hover .social-icon {
+  filter: brightness(1.5);
+}
+
+.footer-copy {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+/* Tablet/Desktop Enhancements for List */
+@media (min-width: 600px) {
+  .reasons-list {
+    gap: 1.25rem;
+    max-width: 875px;
+    margin: auto;
+  }
+
+  .reasons-list li {
+    font-size: 1rem;
+    padding: 1rem 1.25rem;
+    border-left-width: 5px;
+    border-radius: 8px;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .footer-nav {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .main-intro img {
+        max-width: 25%;
+        margin: 1rem;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    .nav-links {
+        position: static;
+        height: auto;
+        width: auto;
+        flex-direction: row;
+        background: none;
+        padding: 0;
+        gap: 2rem;
+        display: flex !important;
+        right: auto !important;
+    }
+
+    .steps-to-sold-wrapper {
+        flex-direction: row;
+        gap: 3rem;
+    }
+}
+
+
+
